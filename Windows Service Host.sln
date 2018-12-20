@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows Service Host", "Windows Service Host\Windows Service Host.csproj", "{E4B2FF5E-4CD0-4BF1-A08F-68BA5DD396F6}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FamilyLogger", "FamilyLogger\FamilyLogger.vdproj", "{851A4368-7538-481B-803F-8F7594B40DF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,23 @@ Global
 		{E4B2FF5E-4CD0-4BF1-A08F-68BA5DD396F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4B2FF5E-4CD0-4BF1-A08F-68BA5DD396F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4B2FF5E-4CD0-4BF1-A08F-68BA5DD396F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851A4368-7538-481B-803F-8F7594B40DF3}.Debug|Any CPU.ActiveCfg = Debug
+		{851A4368-7538-481B-803F-8F7594B40DF3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AA8F48D-AE33-401E-BFAF-5B20E33CE1EE}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 EndGlobal
