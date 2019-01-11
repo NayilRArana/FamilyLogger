@@ -8,7 +8,7 @@ You can download the program by clicking the link and following the instructions
 
 ## Highlights
 
-The main method is heavily based on the code in the readme for the repository of the API that I used to make this (https://github.com/fabriciorissetto/KeystrokeAPI). I did add a little functionality; I displayed the date at the top of the console window.
+The main method is heavily based on the code in the readme for the repository of the API that I used to make this (https://github.com/fabriciorissetto/KeystrokeAPI). I did add a little functionality; the current date is displyed at the top of the console window. A new function was made to facilitate this.
 
 ## Built With
 
