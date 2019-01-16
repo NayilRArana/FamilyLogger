@@ -27,6 +27,7 @@ Global
 		{851A4368-7538-481B-803F-8F7594B40DF3}.Debug|Default.ActiveCfg = Debug
 		{851A4368-7538-481B-803F-8F7594B40DF3}.Debug|Default.Build.0 = Debug
 		{851A4368-7538-481B-803F-8F7594B40DF3}.Release|Any CPU.ActiveCfg = Release
+		{851A4368-7538-481B-803F-8F7594B40DF3}.Release|Any CPU.Build.0 = Release
 		{851A4368-7538-481B-803F-8F7594B40DF3}.Release|Default.ActiveCfg = Release
 		{851A4368-7538-481B-803F-8F7594B40DF3}.Release|Default.Build.0 = Release
 	EndGlobalSection
@@ -35,6 +36,12 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AA8F48D-AE33-401E-BFAF-5B20E33CE1EE}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Default = Debug|Default
+		Release|Any CPU = Release|Any CPU
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
