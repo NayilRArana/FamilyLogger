@@ -4,6 +4,7 @@ using Keystroke.API;
 using System.IO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Threading;
 
 namespace Windows_Service_Host
 {
@@ -57,6 +58,7 @@ namespace Windows_Service_Host
                     email = reader["email"].ToString();
                 }
                 return email;
+                
             }
         }
 
@@ -64,22 +66,30 @@ namespace Windows_Service_Host
         //     database.
         // side effects: console output, writing to file, reading from and writing to a database, variable mutation
         static void Main(string[] args)
-        {
-            string userEmail = null;
-            do
+        {   try
             {
-                userEmail = Login();
-                if (String.IsNullOrEmpty(userEmail))
+                string userEmail = null;
+                do
                 {
-                    Console.WriteLine("Email or password is incorrect. Please try again.");
+                    userEmail = Login();
+                    if (String.IsNullOrEmpty(userEmail))
+                    {
+                        Console.WriteLine("Email or password is incorrect. Please try again.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Login successful!");
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Login successful!");
-                }
+                while (String.IsNullOrEmpty(userEmail));
+                addFileToDatabase(userEmail);
             }
-            while (String.IsNullOrEmpty(userEmail));
-            addFileToDatabase(userEmail);
+            catch
+            {
+                Console.WriteLine("An error has occured. The application will now exit in 5 seconds.");
+                Thread.Sleep(5000);
+                Environment.Exit(1);
+            }
 
             using (var api = new KeystrokeAPI())
             {
