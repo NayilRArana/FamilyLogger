@@ -4,7 +4,7 @@ This is a simple console application that allows the user to login to their acco
 
 ## Getting Started
 
-You can download the program by clicking the link and following the instructions: https://familylogger.azurewebsites.net/Download.aspx
+This was formerly hosted on Azure, but my free trial ran out. I may host it somewhere else at some point.
 
 ## Highlights
 
